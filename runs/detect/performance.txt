@@ -1,4 +1,10 @@
------- YOLOv9s ------
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x= YOLOv9s =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:13<00:00,  3.39s/it]
                    all         56        533      0.535      0.233      0.396      0.181
                Bicycle         12         21      0.833      0.238      0.555      0.108
@@ -15,7 +21,416 @@
                  Table         23         68      0.465      0.294       0.32      0.152
 Speed: 1.3ms preprocess, 199.4ms inference, 0.0ms loss, 1.0ms postprocess per image
 
+=== Evaluation Results ===
 mAP@0.5:        0.3960
 mAP@0.5:0.95:   0.1807
 Inference Time: 199.39 ms/image
 Total Time:     33.51 seconds
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:10<00:00,  2.68s/it]
+                   all         56        533       0.61      0.253      0.437       0.18
+               Bicycle         12         21      0.833      0.238      0.555     0.0862
+                  Boat          7         12      0.667      0.333      0.506      0.183
+                Bottle         14         26        0.5     0.0769      0.269     0.0546
+                   Bus          3          3        0.5      0.333      0.501       0.25
+                   Car          8         14      0.636        0.5       0.58      0.259
+                   Cat          9         23      0.636      0.304      0.466      0.223
+                 Chair         19        119       0.62      0.261      0.408      0.206
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12          1       0.25      0.625      0.307
+             Motorbike          6         18      0.667      0.222      0.482      0.179
+                People         28        103      0.872       0.33      0.608      0.301
+                 Table         23         68      0.394      0.191      0.238      0.112
+Speed: 0.9ms preprocess, 169.0ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.4365
+mAP@0.5:0.95:   0.1802
+Inference Time: 168.98 ms/image
+Total Time:     17.66 seconds
+
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x= YOLOv9m =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:26<00:00,  6.54s/it]
+                   all         56        533      0.681      0.389      0.555      0.308
+               Bicycle         12         21          1      0.571      0.786      0.313
+                  Boat          7         12      0.571      0.333      0.525      0.381
+                Bottle         14         26        0.7      0.269      0.475        0.2
+                   Bus          3          3      0.333      0.333      0.446      0.356
+                   Car          8         14      0.818      0.643      0.774      0.335
+                   Cat          9         23      0.625      0.217      0.446      0.342
+                 Chair         19        119      0.581      0.361      0.485      0.311
+                   Cup          6        114      0.368     0.0614      0.198     0.0339
+                   Dog          6         12      0.833      0.417      0.659      0.539
+             Motorbike          6         18      0.455      0.278      0.318     0.0853
+                People         28        103      0.952      0.583      0.781      0.421
+                 Table         23         68      0.932      0.603      0.767      0.378
+Speed: 1.1ms preprocess, 442.1ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5550
+mAP@0.5:0.95:   0.3080
+Inference Time: 442.15 ms/image
+Total Time:     31.09 seconds
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:23<00:00,  5.85s/it]
+                   all         56        533      0.736       0.36      0.557      0.309
+               Bicycle         12         21          1      0.286      0.643      0.311
+                  Boat          7         12        0.6       0.25      0.453      0.312
+                Bottle         14         26      0.875      0.269       0.56      0.239
+                   Bus          3          3      0.333      0.333      0.446      0.312
+                   Car          8         14        0.9      0.643      0.789      0.355
+                   Cat          9         23      0.857      0.261      0.571      0.405
+                 Chair         19        119      0.741      0.361      0.543      0.346
+                   Cup          6        114       0.25     0.0175      0.131     0.0131
+                   Dog          6         12          1        0.5       0.75      0.567
+             Motorbike          6         18      0.455      0.278       0.29       0.13
+                People         28        103      0.969      0.612      0.799      0.398
+                 Table         23         68      0.854      0.515      0.704      0.321
+Speed: 1.4ms preprocess, 392.9ms inference, 0.0ms loss, 0.6ms postprocess per image
+
+
+=== Evaluation Results ===
+mAP@0.5:        0.5566
+mAP@0.5:0.95:   0.3090
+Inference Time: 392.85 ms/image
+Total Time:     27.71 seconds
+
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x= YOLOv9c =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+[DAY]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:34<00:00,  8.74s/it]
+                   all         56        533      0.676      0.385      0.547      0.281
+               Bicycle         12         21      0.857      0.286      0.592      0.277
+                  Boat          7         12        0.2     0.0833      0.134      0.107
+                Bottle         14         26      0.786      0.423      0.616      0.257
+                   Bus          3          3          0          0          0          0
+                   Car          8         14      0.769      0.714      0.777      0.311
+                   Cat          9         23      0.833      0.435      0.662      0.289
+                 Chair         19        119      0.803      0.479      0.618        0.4
+                   Cup          6        114      0.385     0.0439      0.219     0.0306
+                   Dog          6         12       0.75        0.5      0.675      0.519
+             Motorbike          6         18          1      0.444      0.722      0.347
+                People         28        103      0.967      0.563      0.773       0.41
+                 Table         23         68      0.759      0.647      0.771      0.422
+Speed: 3.9ms preprocess, 595.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5465
+mAP@0.5:0.95:   0.2807
+Inference Time: 595.72 ms/image
+Total Time:     39.24 seconds
+
+
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:35<00:00,  8.99s/it]
+                   all         56        533      0.681      0.405      0.563       0.29
+               Bicycle         12         21      0.857      0.286      0.579      0.259
+                  Boat          7         12        0.2     0.0833      0.176      0.106
+                Bottle         14         26      0.591        0.5      0.561      0.193
+                   Bus          3          3          1      0.333      0.667      0.467
+                   Car          8         14      0.769      0.714      0.771      0.296
+                   Cat          9         23      0.778      0.304      0.554      0.312
+                 Chair         19        119      0.839      0.437      0.629      0.381
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12      0.778      0.583      0.734       0.53
+             Motorbike          6         18      0.692        0.5      0.647      0.293
+                People         28        103      0.906      0.563       0.75      0.352
+                 Table         23         68       0.76      0.559      0.686      0.286
+Speed: 2.7ms preprocess, 613.9ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5629
+mAP@0.5:0.95:   0.2895
+Inference Time: 613.88 ms/image
+Total Time:     39.95 seconds
+
+
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x RTDETR-L  x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [01:04<00:00, 16.21s/it]
+                   all         56        533      0.572      0.352      0.363      0.149
+               Bicycle         12         21      0.711      0.238       0.23     0.0491
+                  Boat          7         12      0.375      0.333      0.331      0.122
+                Bottle         14         26      0.582      0.192      0.202     0.0489
+                   Bus          3          3      0.691      0.667      0.666      0.284
+                   Car          8         14      0.665      0.643      0.655      0.243
+                   Cat          9         23      0.782      0.469       0.49      0.245
+                 Chair         19        119       0.74      0.328      0.361      0.149
+                   Cup          6        114          0          0     0.0145    0.00434
+                   Dog          6         12      0.637      0.333      0.323      0.144
+             Motorbike          6         18      0.501      0.279      0.353       0.22
+                People         28        103      0.526      0.437      0.429       0.13
+                 Table         23         68      0.656      0.309      0.303      0.144
+Speed: 8.5ms preprocess, 1122.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.3632
+mAP@0.5:0.95:   0.1486
+Inference Time: 1122.73 ms/image
+Total Time:     70.82 seconds
+
+[NIGHT]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:58<00:00, 14.63s/it]
+                   all         56        533      0.639      0.304      0.351      0.144
+               Bicycle         12         21      0.178     0.0476      0.132     0.0284
+                  Boat          7         12      0.371       0.25      0.247     0.0838
+                Bottle         14         26      0.542      0.154      0.159     0.0518
+                   Bus          3          3      0.556      0.667      0.666      0.284
+                   Car          8         14      0.672      0.643       0.58      0.268
+                   Cat          9         23      0.913      0.478      0.672      0.288
+                 Chair         19        119      0.773      0.316      0.403      0.173
+                   Cup          6        114          1          0     0.0153    0.00272
+                   Dog          6         12      0.766      0.277      0.322      0.147
+             Motorbike          6         18      0.731      0.222      0.328      0.179
+                People         28        103      0.675      0.388      0.415      0.107
+                 Table         23         68      0.495      0.202      0.276      0.119
+Speed: 8.4ms preprocess, 1008.1ms inference, 0.0ms loss, 0.5ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.3513
+mAP@0.5:0.95:   0.1443
+Inference Time: 1008.14 ms/image
+Total Time:     64.58 seconds
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x RTDETR-X  x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+[DAY]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [01:52<00:00, 28.03s/it]
+                   all         56        533      0.628      0.452      0.492      0.253
+               Bicycle         12         21      0.873      0.329      0.485      0.159
+                  Boat          7         12       0.28       0.25      0.271      0.128
+                Bottle         14         26      0.873      0.265      0.415      0.233
+                   Bus          3          3          0          0     0.0181     0.0163
+                   Car          8         14      0.592      0.857      0.852       0.44
+                   Cat          9         23       0.77      0.652      0.656      0.401
+                 Chair         19        119      0.673      0.588      0.628      0.333
+                   Cup          6        114      0.447     0.0568      0.237     0.0812
+                   Dog          6         12       0.93      0.667      0.669      0.484
+             Motorbike          6         18      0.542      0.444       0.34       0.14
+                People         28        103       0.79      0.622      0.667      0.345
+                 Table         23         68      0.766      0.691       0.67      0.277
+Speed: 3.2ms preprocess, 1968.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.4924
+mAP@0.5:0.95:   0.2531
+Inference Time: 1968.66 ms/image
+Total Time:     121.84 seconds
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [02:01<00:00, 30.29s/it]
+                   all         56        533      0.607       0.53       0.52       0.28
+               Bicycle         12         21      0.522      0.209       0.31      0.114
+                  Boat          7         12      0.476       0.25      0.196      0.093
+                Bottle         14         26      0.823      0.538      0.557      0.338
+                   Bus          3          3       0.18      0.667      0.556      0.423
+                   Car          8         14      0.526      0.857      0.891      0.443
+                   Cat          9         23      0.794      0.696      0.662      0.392
+                 Chair         19        119      0.617       0.63      0.586       0.31
+                   Cup          6        114      0.527       0.14      0.221     0.0769
+                   Dog          6         12      0.945       0.75      0.754      0.502
+             Motorbike          6         18      0.455      0.278       0.25      0.103
+                People         28        103      0.746      0.621      0.661       0.32
+                 Table         23         68      0.672      0.721      0.602      0.241
+Speed: 8.3ms preprocess, 2123.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5205
+mAP@0.5:0.95:   0.2796
+Inference Time: 2123.71 ms/image
+Total Time:     129.60 seconds
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x YOLOv10s =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:11<00:00,  2.77s/it]
+                   all         56        533       0.55       0.25      0.406      0.223
+               Bicycle         12         21      0.727      0.381      0.557      0.164
+                  Boat          7         12        0.5     0.0833      0.313      0.188
+                Bottle         14         26        0.2     0.0385      0.104     0.0623
+                   Bus          3          3        0.5      0.333      0.333      0.167
+                   Car          8         14        0.5      0.429      0.502      0.257
+                   Cat          9         23          1       0.13      0.565      0.286
+                 Chair         19        119      0.519      0.118      0.322       0.24
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12        0.4      0.167      0.332      0.268
+             Motorbike          6         18        0.8      0.444      0.655      0.483
+                People         28        103      0.782      0.417      0.638      0.308
+                 Table         23         68      0.674      0.456      0.546      0.258
+Speed: 1.1ms preprocess, 177.0ms inference, 0.0ms loss, 0.1ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.4056
+mAP@0.5:0.95:   0.2235
+Inference Time: 176.96 ms/image
+Total Time:     16.08 seconds
+
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:09<00:00,  2.34s/it]
+                   all         56        533      0.603      0.262      0.434      0.216
+               Bicycle         12         21      0.833      0.238      0.548      0.101
+                  Boat          7         12        0.5     0.0833      0.313      0.188
+                Bottle         14         26        0.4     0.0769      0.223      0.167
+                   Bus          3          3        0.5      0.333      0.333        0.1
+                   Car          8         14      0.625      0.714      0.762      0.401
+                   Cat          9         23          1      0.304      0.652      0.304
+                 Chair         19        119      0.481      0.109      0.287      0.193
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12       0.25     0.0833      0.157      0.094
+             Motorbike          6         18          1      0.333      0.667      0.462
+                People         28        103      0.894      0.408       0.67      0.341
+                 Table         23         68      0.756      0.456      0.591      0.247
+Speed: 0.9ms preprocess, 148.6ms inference, 0.0ms loss, 0.1ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.4336
+mAP@0.5:0.95:   0.2164
+Inference Time: 148.62 ms/image
+Total Time:     12.88 seconds
+
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x YOLOv10m =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:25<00:00,  6.27s/it]
+                   all         56        533       0.73      0.292      0.517      0.269
+               Bicycle         12         21          1      0.286      0.643      0.327
+                  Boat          7         12          1     0.0833      0.542      0.271
+                Bottle         14         26       0.75      0.231       0.52      0.191
+                   Bus          3          3          0          0          0          0
+                   Car          8         14      0.467        0.5      0.527      0.277
+                   Cat          9         23       0.75      0.391      0.566      0.177
+                 Chair         19        119      0.764      0.353      0.572      0.372
+                   Cup          6        114          1     0.0351      0.518      0.207
+                   Dog          6         12        0.8      0.333        0.6      0.453
+             Motorbike          6         18      0.556      0.278      0.371      0.141
+                People         28        103      0.934      0.553      0.761      0.419
+                 Table         23         68      0.738      0.456      0.578      0.392
+Speed: 2.3ms preprocess, 423.7ms inference, 0.0ms loss, 0.1ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5165
+mAP@0.5:0.95:   0.2690
+Inference Time: 423.65 ms/image
+Total Time:     29.00 seconds
+
+
+[NIGHT]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:22<00:00,  5.60s/it]
+                   all         56        533      0.701      0.338      0.547      0.278
+               Bicycle         12         21      0.857      0.286      0.592       0.27
+                  Boat          7         12      0.333     0.0833      0.237      0.119
+                Bottle         14         26       0.75      0.231       0.52      0.163
+                   Bus          3          3        0.5      0.333      0.501        0.2
+                   Car          8         14        0.4      0.429      0.506      0.263
+                   Cat          9         23      0.917      0.478      0.703      0.318
+                 Chair         19        119      0.849      0.378      0.616      0.375
+                   Cup          6        114          1     0.0351      0.518      0.257
+                   Dog          6         12       0.75        0.5      0.686      0.431
+             Motorbike          6         18        0.5      0.278      0.382      0.151
+                People         28        103      0.824      0.544      0.723      0.392
+                 Table         23         68      0.733      0.485      0.584      0.396
+Speed: 1.1ms preprocess, 378.0ms inference, 0.0ms loss, 0.1ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.5473
+mAP@0.5:0.95:   0.2777
+Inference Time: 377.96 ms/image
+Total Time:     26.25 seconds
+
+
+
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+|                                                   |
+|=x=x=x=x=x=x=x=x=x=x YOLOv10b =x=x=x=x=x=x=x=x=x=x=|
+|                                                   |
+|:::::::::::::::::::::::::::::::::::::::::::::::::::|
+
+[DAY]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:34<00:00,  8.64s/it]
+                   all         56        533      0.663      0.311      0.493      0.233
+               Bicycle         12         21        0.9      0.429      0.666     0.0996
+                  Boat          7         12        0.6       0.25      0.386      0.151
+                Bottle         14         26        0.5      0.154      0.349      0.133
+                   Bus          3          3          1      0.667      0.833      0.333
+                   Car          8         14      0.727      0.571      0.712      0.384
+                   Cat          9         23      0.833      0.217      0.521      0.293
+                 Chair         19        119      0.676      0.193      0.418      0.297
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12        0.8      0.333      0.582      0.383
+             Motorbike          6         18        0.5      0.167      0.374      0.224
+                People         28        103      0.852      0.447      0.677      0.342
+                 Table         23         68      0.568      0.309      0.403      0.158
+Speed: 2.8ms preprocess, 593.4ms inference, 0.0ms loss, 0.1ms postprocess per image
+=== Evaluation Results ===
+mAP@0.5:        0.4935
+mAP@0.5:0.95:   0.2332
+Inference Time: 593.39 ms/image
+Total Time:     38.47 seconds
+
+
+[NIGHT]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:32<00:00,  8.16s/it]
+                   all         56        533      0.639      0.295      0.467       0.22
+               Bicycle         12         21      0.833      0.238      0.548     0.0818
+                  Boat          7         12        0.5      0.167      0.319      0.114
+                Bottle         14         26      0.444      0.154      0.312      0.101
+                   Bus          3          3          1      0.667      0.833      0.417
+                   Car          8         14      0.714      0.643      0.681      0.348
+                   Cat          9         23          1      0.348      0.674      0.317
+                 Chair         19        119      0.651      0.176      0.393      0.254
+                   Cup          6        114          0          0          0          0
+                   Dog          6         12        0.6       0.25      0.441      0.311
+             Motorbike          6         18        0.5      0.167      0.374      0.227
+                People         28        103      0.859      0.398      0.642      0.308
+                 Table         23         68      0.561      0.338      0.381      0.164
+Speed: 2.1ms preprocess, 559.0ms inference, 0.0ms loss, 0.1ms postprocess per image
+
+=== Evaluation Results ===
+mAP@0.5:        0.4666
+mAP@0.5:0.95:   0.2203
+Inference Time: 559.03 ms/image
+Total Time:     36.63 seconds
