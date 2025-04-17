@@ -1,0 +1,98 @@
+=== Evaluation Performance Summary ===
+
+=== Result: YOLOv10s-day ===
+mAP@0.5:       0.3960
+mAP@0.5:0.95:  0.2102
+Inference:     221.08 ms/img
+Total elapsed: 17.30 sec
+----------------------------------------
+=== Result: YOLOv10m-day ===
+mAP@0.5:       0.5047
+mAP@0.5:0.95:  0.2587
+Inference:     515.80 ms/img
+Total elapsed: 34.39 sec
+----------------------------------------
+=== Result: YOLOv10b-day ===
+mAP@0.5:       0.4900
+mAP@0.5:0.95:  0.2251
+Inference:     770.25 ms/img
+Total elapsed: 49.14 sec
+----------------------------------------
+=== Result: YOLOv9s-day ===
+mAP@0.5:       0.3972
+mAP@0.5:0.95:  0.1752
+Inference:     256.12 ms/img
+Total elapsed: 20.05 sec
+----------------------------------------
+=== Result: YOLOv9m-day ===
+mAP@0.5:       0.5739
+mAP@0.5:0.95:  0.3059
+Inference:     606.62 ms/img
+Total elapsed: 40.06 sec
+----------------------------------------
+=== Result: YOLOv9c-day ===
+mAP@0.5:       0.5324
+mAP@0.5:0.95:  0.2672
+Inference:     860.54 ms/img
+Total elapsed: 55.14 sec
+----------------------------------------
+=== Result: RTDETR-L-day ===
+mAP@0.5:       0.3632
+mAP@0.5:0.95:  0.1486
+Inference:     1380.11 ms/img
+Total elapsed: 93.36 sec
+----------------------------------------
+=== Result: RTDETR-X-day ===
+mAP@0.5:       0.4924
+mAP@0.5:0.95:  0.2531
+Inference:     2583.54 ms/img
+Total elapsed: 165.26 sec
+----------------------------------------
+=== Result: YOLOv10s-night ===
+mAP@0.5:       0.4144
+mAP@0.5:0.95:  0.2062
+Inference:     246.00 ms/img
+Total elapsed: 19.46 sec
+----------------------------------------
+=== Result: YOLOv10m-night ===
+mAP@0.5:       0.5391
+mAP@0.5:0.95:  0.2677
+Inference:     574.25 ms/img
+Total elapsed: 37.67 sec
+----------------------------------------
+=== Result: YOLOv10b-night ===
+mAP@0.5:       0.4652
+mAP@0.5:0.95:  0.2136
+Inference:     765.94 ms/img
+Total elapsed: 49.52 sec
+----------------------------------------
+=== Result: YOLOv9s-night ===
+mAP@0.5:       0.4439
+mAP@0.5:0.95:  0.1827
+Inference:     236.07 ms/img
+Total elapsed: 18.66 sec
+----------------------------------------
+=== Result: YOLOv9m-night ===
+mAP@0.5:       0.5707
+mAP@0.5:0.95:  0.3132
+Inference:     588.45 ms/img
+Total elapsed: 38.35 sec
+----------------------------------------
+=== Result: YOLOv9c-night ===
+mAP@0.5:       0.5704
+mAP@0.5:0.95:  0.2755
+Inference:     829.73 ms/img
+Total elapsed: 53.53 sec
+----------------------------------------
+=== Result: RTDETR-L-night ===
+mAP@0.5:       0.3513
+mAP@0.5:0.95:  0.1443
+Inference:     1289.16 ms/img
+Total elapsed: 88.29 sec
+----------------------------------------
+=== Result: RTDETR-X-night ===
+mAP@0.5:       0.5205
+mAP@0.5:0.95:  0.2796
+Inference:     2444.03 ms/img
+Total elapsed: 159.09 sec
+----------------------------------------

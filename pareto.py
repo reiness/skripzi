@@ -6,12 +6,14 @@ import numpy as np
 # --- Prepare the data ---
 data = {
     "model": ["9s", "9m", "9c", "rtdetr-l", "rtdetr-x", "10s", "10m", "10b"],
-    "map50_day": [0.3960, 0.555, 0.5465, 0.3632, 0.4924, 0.4056, 0.5165, 0.4935],
-    "inference_day": [199.39, 442.15, 595.72, 1122.73, 1968.66, 176.96, 423.65, 593.39],
-    "map50_night": [0.4365, 0.5566, 0.5629, 0.3513, 0.5205, 0.4336, 0.5473, 0.4666],
-    "inference_night": [168.98, 392.85, 613.88, 1008.14, 2123.71, 148.62, 377.96, 559.03]
+    "map50_day": [0.3972, 0.5739, 0.5324, 0.3632, 0.4924, 0.3960, 0.5047, 0.4900],
+    "inference_day": [256.12, 606.62, 860.54, 1380.11, 2583.54, 221.08, 515.80, 770.25],
+    "map50_night": [0.4439, 0.5707, 0.5704, 0.3513, 0.5205, 0.4114, 0.5391, 0.4652],
+    "inference_night": [236.07, 588.45, 829.73, 1289.16, 2444.03, 246.00, 574.25, 765.94]
 }
+
 df = pd.DataFrame(data)
+
 
 # --- Pareto Frontier Function ---
 def compute_pareto(df, score_col, cost_col):
@@ -90,7 +92,7 @@ for idx, row in df.iterrows():
                 facecolor=facecolor, edgecolor=edge_night, s=120, linewidth=1.5)
 
     # Adjust label placement
-    y_offset_night = row["map50_night"] * (0.98 if row["model"] in ['10s', '10m'] else 1.01)
+    y_offset_night = row["map50_night"] * (1.01 if row["model"] in ['10s', '10m'] else 1.01)
 
     t_night = plt.annotate(row['model'],
                            (row["inference_night"] * 1.01, y_offset_night),
