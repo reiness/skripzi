@@ -11,9 +11,7 @@ data = {
     "map50_night": [0.4439, 0.5707, 0.5704, 0.3513, 0.5205, 0.4114, 0.5391, 0.4652],
     "inference_night": [236.07, 588.45, 829.73, 1289.16, 2444.03, 246.00, 574.25, 765.94]
 }
-
 df = pd.DataFrame(data)
-
 
 # --- Pareto Frontier Function ---
 def compute_pareto(df, score_col, cost_col):
@@ -61,73 +59,107 @@ def parse_model(model):
     else:
         return None, None
 
+# --- Define marker shapes per family ---
+marker_map = {
+    "9": "^",        # triangle
+    "10": "*",       # star
+    "rtdetr": "s"    # square
+}
+
 # --- Plotting ---
 plt.figure(figsize=(10, 6))
 
 edge_day = "red"
 edge_night = "blue"
 
-# Plot each point with appropriate color and annotated label
+# Plot each point with appropriate color, marker, and annotated label
 for idx, row in df.iterrows():
     family, level = parse_model(row['model'])
     if family is None:
         continue
     facecolor = palette[family][level]
+    marker = marker_map[family]
 
     # Day point
-    plt.scatter(row["inference_day"], row["map50_day"],
-                facecolor=facecolor, edgecolor=edge_day, s=120, linewidth=1.5)
-
-    # Adjust label placement
+    plt.scatter(
+        row["inference_day"], row["map50_day"],
+        marker=marker,
+        facecolor=facecolor,
+        edgecolor=edge_day,
+        s=120, linewidth=1.5
+    )
+    # Annotate Day
     y_offset_day = row["map50_day"] * (0.975 if row["model"] in ['10s', '10m'] else 1.01)
-
-    t_day = plt.annotate(row['model'],
-                         (row["inference_day"] * 1.01, y_offset_day),
-                         color=edge_day, fontsize=9)
-    t_day.set_path_effects([path_effects.Stroke(linewidth=0.5, foreground='black'),
-                            path_effects.Normal()])
+    t_day = plt.annotate(
+        row['model'],
+        (row["inference_day"] * 1.01, y_offset_day),
+        color=edge_day, fontsize=9
+    )
+    t_day.set_path_effects([
+        path_effects.Stroke(linewidth=0.5, foreground='black'),
+        path_effects.Normal()
+    ])
 
     # Night point
-    plt.scatter(row["inference_night"], row["map50_night"],
-                facecolor=facecolor, edgecolor=edge_night, s=120, linewidth=1.5)
-
-    # Adjust label placement
-    y_offset_night = row["map50_night"] * (1.01 if row["model"] in ['10s', '10m'] else 1.01)
-
-    t_night = plt.annotate(row['model'],
-                           (row["inference_night"] * 1.01, y_offset_night),
-                           color=edge_night, fontsize=9)
-    t_night.set_path_effects([path_effects.Stroke(linewidth=0.5, foreground='black'),
-                              path_effects.Normal()])
+    plt.scatter(
+        row["inference_night"], row["map50_night"],
+        marker=marker,
+        facecolor=facecolor,
+        edgecolor=edge_night,
+        s=120, linewidth=1.5
+    )
+    # Annotate Night
+    y_offset_night = row["map50_night"] * 1.01
+    t_night = plt.annotate(
+        row['model'],
+        (row["inference_night"] * 1.01, y_offset_night),
+        color=edge_night, fontsize=9
+    )
+    t_night.set_path_effects([
+        path_effects.Stroke(linewidth=0.5, foreground='black'),
+        path_effects.Normal()
+    ])
 
 # Draw Pareto lines
 pareto_day_sorted = pareto_day.sort_values("inference_day")
-plt.plot(pareto_day_sorted["inference_day"], pareto_day_sorted["map50_day"],
-         color=edge_day, linestyle='-', linewidth=2, label='Pareto Day Frontier')
+plt.plot(
+    pareto_day_sorted["inference_day"], pareto_day_sorted["map50_day"],
+    color=edge_day, linestyle='-', linewidth=2, label='Pareto Day Frontier'
+)
 
 pareto_night_sorted = pareto_night.sort_values("inference_night")
-plt.plot(pareto_night_sorted["inference_night"], pareto_night_sorted["map50_night"],
-         color=edge_night, linestyle='-', linewidth=2, label='Pareto Night Frontier')
+plt.plot(
+    pareto_night_sorted["inference_night"], pareto_night_sorted["map50_night"],
+    color=edge_night, linestyle='-', linewidth=2, label='Pareto Night Frontier'
+)
 
 # --- Labels & Aesthetics ---
 plt.xlabel("Inference Time (ms)", fontsize=12)
 plt.ylabel("mAP50", fontsize=12)
 plt.title("Pareto Frontier Visualization", fontsize=14)
 
-# Custom hollow circle legends
+# Custom legend entries
 import matplotlib.lines as mlines
-day_marker = mlines.Line2D([], [], color='red', marker='o', linestyle='None',
-                           markersize=10, markerfacecolor='none', label='Day')
-night_marker = mlines.Line2D([], [], color='blue', marker='o', linestyle='None',
-                             markersize=10, markerfacecolor='none', label='Night')
+day_marker = mlines.Line2D([], [], color=edge_day, marker='o', linestyle='None',
+                           markersize=10, markerfacecolor='none', label='Well-lit')
+night_marker = mlines.Line2D([], [], color=edge_night, marker='o', linestyle='None',
+                             markersize=10, markerfacecolor='none', label='Low-light')
 
-# Legend with both pareto and custom markers
-plt.legend(handles=[day_marker, night_marker,
-                    plt.Line2D([], [], color=edge_day, label='Pareto Day Frontier'),
-                    plt.Line2D([], [], color=edge_night, label='Pareto Night Frontier')],
-           loc='best')
+# # Marker legend for families
+# triangle = mlines.Line2D([], [], color='black', marker='^', linestyle='None',
+#                          markersize=10, label='YOLOv9')
+# star     = mlines.Line2D([], [], color='black', marker='*', linestyle='None',
+#                          markersize=10, label='YOLOv10')
+# square   = mlines.Line2D([], [], color='black', marker='s', linestyle='None',
+#                          markersize=10, label='RTDETR')
+
+plt.legend(handles=[
+    day_marker, night_marker,
+    plt.Line2D([], [], color=edge_day, label='Pareto well-lit Frontier'),
+    plt.Line2D([], [], color=edge_night, label='Pareto low-light Frontier'),
+    # triangle, star, square
+], loc='best')
 
 plt.grid(True)
 plt.tight_layout()
 plt.show()
-
